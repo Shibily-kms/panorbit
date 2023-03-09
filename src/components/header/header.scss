@@ -12,4 +12,49 @@
             font-weight: 600;
         }
     }
+
+    .right {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .icon {
+            margin-right: 10px;
+            display: none;
+            place-content: center;
+            border: none;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            background-color: rgb(192, 192, 192);
+            color: rgb(112, 112, 112);
+            border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+        }
+
+    }
+
+    .card-div {
+        position: absolute;
+        width: 290px;
+        height: auto;
+        right: 40px;
+        top: 90px;
+    }
+
+    @media screen and (max-width:980px) {
+
+        .right {
+            .icon {
+                display: grid;
+            }
+        }
+
+
+
+    }
 }

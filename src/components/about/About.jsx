@@ -2,11 +2,11 @@ import React from 'react'
 import './about.scss'
 import Header from '../header/Header'
 
-function About() {
+function About({ show, setShow }) {
   return (
     <div className='about'>
       <div className="header-div">
-        <Header title={"Profile"} />
+        <Header title={"Profile"} show={show} setShow={setShow} />
       </div>
       <div className="content">
         <div className="left">

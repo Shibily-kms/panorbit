@@ -30,10 +30,8 @@ function Layout() {
                 <Sidebar id={id} />
             </div>
             <div className="page-div">
-
-                {/* <button onClick={() => setShow((show) => !show)}>sdf</button> */}
                 <Routes>
-                    <Route path='/profile' element={<About />} />
+                    <Route path='/profile' element={<About setShow={setShow} show={show} />} />
                 </Routes>
             </div>
             <div className="chat-div">
