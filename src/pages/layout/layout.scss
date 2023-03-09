@@ -9,14 +9,14 @@
     }
 
     .show-side-bar {
-       
+
         position: relative;
 
     }
 
 
     .page-div {
-        background-color: seagreen;
+        padding-left: 40px;
     }
 
     .shadow {
@@ -40,6 +40,10 @@
             width: 240px;
 
 
+        }
+
+        .page-div {
+            padding-left: 0px;
         }
 
         .shadow {

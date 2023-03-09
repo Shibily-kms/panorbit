@@ -43,6 +43,10 @@
             height: calc(100vh - 250px);
             min-height: 200px;
             overflow: auto;
+
+            .profile-div {
+                border-bottom: 1px solid rgb(221, 221, 221);
+            }
         }
     }
 }
