@@ -1,0 +1,75 @@
+.sidebar {
+    .boader {
+        width: 100%;
+        height: calc(100vh - 70px);
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        padding: 40px;
+        display: flex;
+        align-items: center;
+        background: rgb(4, 120, 142);
+        background: linear-gradient(360deg, rgb(123, 54, 197) 0%, rgb(58, 106, 196) 100%);
+        position: relative;
+
+        .menu {
+            width: 100%;
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 13px 0;
+                    border-bottom: 1px solid rgba(189, 189, 189, 0.582);
+                    position: relative;
+
+                    a {
+                        color: rgb(194, 194, 194);
+                        font-weight: 400;
+
+                        .icon {
+                            display: none;
+                        }
+                    }
+
+                    .active {
+                        color: white;
+                        font-weight: 500;
+
+                        .icon {
+                            position: absolute;
+                            width: 27px;
+                            height: 30px;
+                            background-color: white;
+                            color: rgb(177, 177, 177);
+                            font-size: 22px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            right: -40px;
+                            top: 5px;
+                            border-radius: 15px 0 0 15px;
+                            -webkit-border-radius: 15px 0 0 15px;
+                            -moz-border-radius: 15px 0 0 15px;
+                            -ms-border-radius: 15px 0 0 15px;
+                            -o-border-radius: 15px 0 0 15px;
+
+                        }
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}

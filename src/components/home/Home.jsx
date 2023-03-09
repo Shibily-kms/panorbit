@@ -16,7 +16,7 @@ function Home({ users }) {
                         {users[0] ?
                             <>
                                 {users.map((value, index) => {
-                                    return <Profile key={index} name={value.name} image={value.profilepicture} path={'/' + value.id + '/profle'} />
+                                    return <Profile key={index} name={value.name} image={value.profilepicture} path={'/' + value.id + '/profile'} />
                                 })}
                             </>
                             : 'Loading'}

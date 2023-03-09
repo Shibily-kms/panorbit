@@ -1,0 +1,55 @@
+.layout {
+    display: grid;
+    grid-template-columns: 240px auto;
+    padding: 35px 45px;
+
+
+    .sidebar-div {
+        height: calc(100vh - 70px);
+    }
+
+    .show-side-bar {
+       
+        position: relative;
+
+    }
+
+
+    .page-div {
+        background-color: seagreen;
+    }
+
+    .shadow {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:980px) {
+    .layout {
+        grid-template-columns: 100%;
+
+
+        .sidebar-div {
+            display: none;
+        }
+
+        .show-side-bar {
+            display: block;
+            position: absolute;
+            width: 240px;
+
+
+        }
+
+        .shadow {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: none;
+            top: 0;
+            left: 0;
+        }
+    }
+}
