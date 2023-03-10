@@ -1,18 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import './layout.scss'
 import { Routes, Route } from 'react-router-dom'
+import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from 'react-redux'
+import axios from '../../config/axios'
+import { setUser } from '../../redux/features/userSlice'
 import About from '../../components/about/About'
 import Posts from '../../components/posts/Posts'
 import Gallery from '../../components/gallery/Gallery'
 import Todo from '../../components/todo/Todo'
 import Sidebar from '../../components/side-bar/Sidebar'
-import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from 'react-redux'
-import axios from '../../config/axios'
-import { setUser } from '../../redux/features/userSlice'
+import ChatList from '../../components/chat-list/ChatList'
 
 function Layout() {
     const [show, setShow] = useState(false)
+    const [chatShow, setChatShow] = useState(false)
     const { id } = useParams();
     const { user } = useSelector((state) => state.user)
     const dispatch = useDispatch()
@@ -23,10 +25,14 @@ function Layout() {
             })
         }
     }, [])
+    const handleHide = () => {
+        setShow(false)
+        setChatShow(false)
+    }
     return (
         < div className='layout' >
-            {show ?
-                <div className="shadow" onClick={() => setShow(false)}></div>
+            {show || chatShow ?
+                <div className="shadow" onClick={handleHide}></div>
                 : ""
             }
             <div className={show ? "sidebar-div show-side-bar" : 'sidebar-div'}>
@@ -41,7 +47,7 @@ function Layout() {
                 </Routes>
             </div>
             <div className="chat-div">
-
+                <ChatList chatShow={chatShow} setChatShow={setChatShow} />
             </div>
 
         </ div>

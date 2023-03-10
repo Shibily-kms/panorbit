@@ -3,10 +3,12 @@ import './card.scss'
 import Profile from '../profile/Profile'
 import axios from '../../config/axios'
 import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 function Card() {
     const [users, setUsers] = useState([])
     const { user } = useSelector((state) => state.user)
+    const navigate = useNavigate()
     useEffect(() => {
         axios.get('/api/users.json').then((response) => {
             setUsers([response.data.users[1], response.data.users[2]])
@@ -32,7 +34,7 @@ function Card() {
                     </> : 'Loading...'}
             </div>
             <div className="button">
-                <button>Sign out</button>
+                <button onClick={() => navigate('/')}>Sign out</button>
             </div>
         </div>
     )

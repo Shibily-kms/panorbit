@@ -9,9 +9,7 @@
     }
 
     .show-side-bar {
-
         position: relative;
-
     }
 
 
@@ -21,6 +19,12 @@
 
     .shadow {
         display: none;
+    }
+
+    .chat-div{
+        position: fixed;
+        bottom: 0;
+        right: 45px;
     }
 
 }
