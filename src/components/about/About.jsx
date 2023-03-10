@@ -74,7 +74,7 @@ function About({ show, setShow }) {
             </div>
           </div>
           <div className="map">
-            <iframe src={`https://maps.google.com/maps?q=${user?.address?.geo?.lat},${user?.address?.geo?.lng}&t=&z=15&ie=UTF8&iwloc=&output=embed`}>
+            <iframe titile="our-map" src={`https://maps.google.com/maps?q=${user?.address?.geo?.lat},${user?.address?.geo?.lng}&t=&z=15&ie=UTF8&iwloc=&output=embed`}>
             </iframe>
             <div className="bottom">
               <p>Lat: <span>{user?.address?.geo?.lat}</span></p>

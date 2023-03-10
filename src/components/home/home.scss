@@ -5,6 +5,55 @@
     justify-content: center;
     align-items: center;
     padding: 15px;
+    overflow: hidden;
+    
+    .background-model {
+
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 400px;
+       
+        background: linear-gradient(360deg,rgb(118, 24, 173),rgb(94, 43, 189),);
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        box-sizing: border-box;
+
+        .curve {
+            position: absolute;
+            height: 250px;
+            width: 100%;
+            bottom: 0;
+            text-align: center;
+        }
+
+        .curve::before {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 54%;
+            height: 100%;
+            transform: translate(85%, 60%);
+            background-color: hsl(0, 0%, 100%);
+        }
+
+        .curve::after {
+            content: '';
+            display: block;
+            position: absolute;
+            border-radius: 100% 50%;
+            width: 55%;
+            height: 100%;
+            background-color: rgb(118, 24, 173);
+            transform: translate(-4%, 40%);
+            z-index: -1;
+        }
+
+    }
 
     .boader {
         background-color: white;

@@ -18,6 +18,7 @@ function Home({ users }) {
         <div>
             <div className="home">
                 <div className="background-model">
+                    <div className="curve"></div>
                 </div>
                 <div className="boader">
                     <div className="top">
