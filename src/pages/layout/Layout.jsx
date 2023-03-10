@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './layout.scss'
 import { Routes, Route } from 'react-router-dom'
 import About from '../../components/about/About'
+import Posts from '../../components/posts/Posts'
+import Gallery from '../../components/gallery/Gallery'
+import Todo from '../../components/todo/Todo'
 import Sidebar from '../../components/side-bar/Sidebar'
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux'
@@ -32,6 +35,9 @@ function Layout() {
             <div className="page-div">
                 <Routes>
                     <Route path='/profile' element={<About setShow={setShow} show={show} />} />
+                    <Route path='/posts' element={<Posts setShow={setShow} show={show} />} />
+                    <Route path='/gallery' element={<Gallery setShow={setShow} show={show} />} />
+                    <Route path='/todo' element={<Todo setShow={setShow} show={show} />} />
                 </Routes>
             </div>
             <div className="chat-div">
